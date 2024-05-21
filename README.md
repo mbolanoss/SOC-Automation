@@ -39,9 +39,43 @@ The project consists in 9 steps that consist in the following:
 
 Now, here are some screenshots of the process and the obtained results:
 ### Wazuh setup
+
 ![agent creation](https://github.com/mbolanoss/SOC-Automation/assets/53063734/d8051399-13d2-4c31-a965-559fab10bd14)
-*Ref 2: Wazuh manager is configured and two agents are registered*
+*Ref 2: Wazuh manager is configured and two agents are registered.*
 
 ### Scenario A: Mimikatz execution in a Windows 10 machine
+
+![Mimikatz exec](https://github.com/mbolanoss/SOC-Automation/assets/53063734/cb7a37eb-764a-496b-9c54-d4011da72d3b)
+![Mimikatz exec with diff name](https://github.com/mbolanoss/SOC-Automation/assets/53063734/c6132401-19fb-4d16-ac89-aff3fe5b3848)
+
+*Ref 3: An execution of Mimikatz is performed, using it's original file name and a different one, to generate and send that event to Wazuh.*
+
+![Wazuh mimikatz search](https://github.com/mbolanoss/SOC-Automation/assets/53063734/d808bb7f-cb5d-434e-b17c-658b7012b362)
+
+*Ref 4: The Mimikatz security event displayed in Wazuh's dashboard.*
+
+![Initial workflow](https://github.com/mbolanoss/SOC-Automation/assets/53063734/fcfcb167-59ea-4ab6-af03-74b9881b65f7)
+![Shuffle initial execution](https://github.com/mbolanoss/SOC-Automation/assets/53063734/b5522fda-6fad-457f-97b9-3479ab715d7f)
+
+*Ref 5: In Shuffle, the workflow is created and the sending of the alert from Wazuh is verified*
+
+![Shuffle regex node](https://github.com/mbolanoss/SOC-Automation/assets/53063734/24a1de0a-88b7-44b3-b90d-4f63ee2afba7)
+
+*Ref 6: A regex node is added to parse the Mimikatz file SHA256 hash.*
+
+![Added virustotal node](https://github.com/mbolanoss/SOC-Automation/assets/53063734/7a6cdcc8-5904-418a-b00d-292f7a3c12fd)
+![virustotal answer](https://github.com/mbolanoss/SOC-Automation/assets/53063734/94dedd30-29d5-42db-87df-fb1ce773f5a6)
+
+*Ref 7: A VirusTotal node is added to search for information and reports using the SHA256 hash of the Mimikatz file.*
+
+![Added thehive node](https://github.com/mbolanoss/SOC-Automation/assets/53063734/132ce0e3-5343-4f98-b23e-7441f29616c0)
+
+*Ref 8: TheHive node added to create an alert.*
+
+![Alert on thehive](https://github.com/mbolanoss/SOC-Automation/assets/53063734/b2250e36-97d3-4624-aad9-446b6d91a3cc)
+![Alert on thehive - detail](https://github.com/mbolanoss/SOC-Automation/assets/53063734/15e82fcf-413c-4431-abf0-991e86187304)
+
+*Ref 9: Finally, the alert is created automatically in TheHive*
+
 ### Scenario B: Failed login attempts
 
