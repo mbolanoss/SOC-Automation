@@ -6,7 +6,7 @@ The SOC Automation Lab project aims to create a controlled environment for detec
 
 ### Skills Learned
 
-- Advanced understanding of SIEM concepts and practical application.
+- Advanced understanding of SIEM concepts and practical applications.
 - Creation of automatic responses to security events using a SOAR platform.
 - Alert creation and management using a case manager.
 - Integration of complex security tools to create a cohesive and automated security operations workflow.
@@ -14,9 +14,9 @@ The SOC Automation Lab project aims to create a controlled environment for detec
 
 ### Tools Used
 
-- Wazuh as SIEM system for log ingestion and analysis.
-- Shuffle as SOAR platform for creation of automatic responses.
-- TheHive as case manager to create formal alerts of security events
+- Wazuh as the SIEM system for log ingestion and analysis.
+- Shuffle as the SOAR platform for creating automatic responses.
+- TheHive as the case manager to create formal alerts for security events
 
 ## Steps
 
